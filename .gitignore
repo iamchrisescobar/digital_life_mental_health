@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+# NOTE: We deploy from docs/ on GitHub Pages, so DO NOT ignore docs/
+# dist/       # (unused because outDir is 'docs')
+
+# Vite / tooling caches
+.vite/
+*.tsbuildinfo
+.eslintcache
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Env files (keep example)
+.env
+.env.*.local
+!.env.example
+
+# Editor & OS junk
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Tests / coverage (if added later)
+coverage/
+.junit/
+.cypress-cache/
+
+# Locks (choose one manager and keep its lockfile; comment others if switching)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
