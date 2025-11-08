@@ -1,4 +1,5 @@
-:root {
+/* Dark theme (default) */
+:root[data-theme="dark"] {
   --bg: #0f172a;      /* slate-900 */
   --panel: #111827;   /* gray-900 */
   --muted: #9ca3af;   /* gray-400 */
@@ -6,15 +7,49 @@
   --brand: #38bdf8;   /* sky-400 */
   --card: #1f2937;    /* gray-800 */
   --accent: #22d3ee;  /* cyan-400 */
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  --card-border: rgba(255,255,255,0.1);
+  --nav-bg: rgba(10, 13, 23, 0.65);
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+  --bg: #f3f4f6;      /* gray-100 */
+  --panel: #ffffff;   /* white */
+  --muted: #6b7280;   /* gray-500 */
+  --text: #1f2937;    /* gray-800 */
+  --brand: #38bdf8;   /* sky-400 */
+  --card: #ffffff;    /* white */
+  --accent: #0ea5e9;  /* sky-500 */
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,1), rgba(249,250,251,1));
+  --card-border: rgba(0,0,0,0.1);
+  --nav-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* Facebook blue for navbar (same in both themes) */
+:root {
+  --facebook-blue: #1877f2;
 }
 
 * { box-sizing: border-box; }
 html, body, #root { height: 100%; }
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  background: radial-gradient(1200px 800px at 10% -10%, #0b1324 0%, var(--bg) 60%);
+  background: var(--bg);
   color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode gradient background */
+:root[data-theme="light"] body {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f3f4f6 100%);
+}
+
+/* Dark mode gradient background */
+:root[data-theme="dark"] body {
+  background: radial-gradient(1200px 800px at 10% -10%, #0b1324 0%, var(--bg) 60%);
 }
 
 a { color: var(--brand); text-decoration: none; }
@@ -37,11 +72,16 @@ a:hover { text-decoration: underline; }
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 16px;
   padding: 16px 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+:root[data-theme="light"] .card {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 .button {
@@ -49,7 +89,7 @@ a:hover { text-decoration: underline; }
   padding: 10px 14px;
   border-radius: 10px;
   background: var(--brand);
-  color: #0b1220;
+  color: #fff;
   font-weight: 600;
 }
 .button:hover { opacity: 0.9; text-decoration: none; }
@@ -59,17 +99,18 @@ a:hover { text-decoration: underline; }
   text-align: center;
   color: var(--muted);
   padding: 48px 16px 32px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid var(--card-border);
 }
 
-/* Navbar */
+/* Navbar - Facebook Blue with translucency */
 .nav-wrapper {
   position: fixed;
   top: 0; left: 0; right: 0;
-  backdrop-filter: blur(8px);
-  background: rgba(10, 13, 23, 0.65);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  background: rgba(24, 119, 242, 0.60); /* Translucent Facebook blue */
+  border-bottom: 1px solid rgba(0,0,0,0.1);
   z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .nav {
@@ -82,52 +123,91 @@ a:hover { text-decoration: underline; }
   position: relative;
 }
 
-.brand { flex: 1 1 auto; min-width: 0; }
+.brand { 
+  flex: 0 1 auto; /* Don't grow, allow shrinking */
+  min-width: 0; 
+  margin-right: auto; /* Push everything else to the right */
+}
 .brand-link {
   font-weight: 700;
-  color: var(--text);
+  color: #ffffff;
   letter-spacing: 0.2px;
   white-space: nowrap;
+  font-size: 1.05rem; /* Slightly smaller */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.brand-link:hover { color: #fff; text-decoration: none; }
+.brand-link:hover { color: #e8f4ff; text-decoration: none; }
 
 .links {
   list-style: none;
   display: none;
   margin: 0;
   padding: 0;
-  gap: 10px;
+  gap: 6px;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 .links li a {
   display: inline-block;
   padding: 8px 12px;
-  border-radius: 10px;
-  color: var(--text);
+  border-radius: 8px;
+  color: #ffffff;
   background: transparent;
   border: 1px solid transparent;
   font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+  font-size: 0.95rem; /* Slightly smaller for better fit */
 }
 .links li a:hover {
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.15);
   text-decoration: none;
 }
 .links li a.active {
-  border-color: rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.2);
 }
 
-.hamburger {
-  background: none;
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 10px;
+/* Theme Toggle Button */
+.theme-toggle {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 8px;
   padding: 8px 10px;
   cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0; /* Don't shrink */
+  width: 40px;
+  height: 40px;
+}
+
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-1px);
+}
+
+.theme-toggle svg {
+  display: block;
+}
+
+/* Hamburger */
+.hamburger {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  flex-shrink: 0; /* Don't shrink */
 }
 .hamburger .bar {
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--text);
+  background: #ffffff;
   margin: 4px 0;
   border-radius: 2px;
 }
@@ -137,31 +217,39 @@ a:hover { text-decoration: underline; }
   .hamburger { display: none; }
 }
 
+/* At narrower widths, hide desktop nav earlier */
+@media (max-width: 819px) {
+  .links { display: none !important; }
+  .hamburger { display: block; }
+}
+
+/* Mobile menu */
 .mobile-menu {
   position: absolute;
   top: 56px;
   right: 16px;
-  background: rgba(16, 18, 28, 0.98);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: var(--facebook-blue);
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 12px;
   padding: 8px;
   display: grid;
   gap: 4px;
   min-width: 200px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.3);
 }
 .mobile-link {
   padding: 10px 12px;
   border-radius: 8px;
-  color: var(--text);
+  color: #ffffff;
   text-decoration: none;
 }
 .mobile-link:hover {
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.15);
 }
 
 /* Headings */
 h1 { font-size: 2rem; margin: 0; }
+h2 { color: var(--text); }
 h3 { margin: 0 0 6px; }
 .refs { line-height: 1.8; }
 
@@ -192,11 +280,15 @@ h3 { margin: 0 0 6px; }
   align-items: center;
   text-align: center;
   padding: 24px 20px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-  border: 2px solid rgba(255,255,255,0.1);
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
   border-radius: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+:root[data-theme="light"] .team-card {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 .team-card:hover {
@@ -210,8 +302,8 @@ h3 { margin: 0 0 6px; }
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid rgba(255,255,255,0.15);
-  background: #111;
+  border: 3px solid var(--card-border);
+  background: var(--panel);
   margin-bottom: 16px;
 }
 
@@ -224,6 +316,7 @@ h3 { margin: 0 0 6px; }
   margin: 0 0 8px; 
   font-size: 1.25rem;
   font-weight: 700;
+  color: var(--text);
 }
 
 .team-role { 
@@ -257,16 +350,15 @@ h3 { margin: 0 0 6px; }
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  border: 2px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.08);
+  border: 2px solid var(--card-border);
+  background: var(--card);
   color: var(--text);
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .icon-btn:hover {
   transform: translateY(-2px);
-  background: rgba(255,255,255,0.15);
-  border-color: rgba(255,255,255,0.3);
+  border-color: var(--brand);
   text-decoration: none;
 }
 
@@ -282,11 +374,10 @@ h3 { margin: 0 0 6px; }
 }
 
 .icon-btn.email {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.2);
+  background: var(--card);
+  border-color: var(--card-border);
 }
 
 .icon-btn.email:hover {
-  background: rgba(255,255,255,0.15);
-  border-color: rgba(255,255,255,0.3);
+  border-color: var(--brand);
 }
