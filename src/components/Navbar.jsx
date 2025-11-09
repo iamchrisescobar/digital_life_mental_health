@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -25,6 +26,8 @@ export default function Navbar() {
           <li><NavLink to="/sources" className={({isActive}) => isActive ? 'active' : ''}>Sources</NavLink></li>
         </ul>
 
+        <ThemeToggle />
+        
         {/* Hamburger for small screens */}
         <button
           aria-label="Menu"
