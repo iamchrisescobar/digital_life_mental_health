@@ -104,7 +104,7 @@ export default function AboutUs() {
             name="Cynthia Szeto"
             yearMajor="Fourth-year Psychology major Digital Humanities minor"
             role="Project Manager"
-            imgSrc="https://placehold.co/320x320/png?text=Headshot"
+            imgSrc="images/team/CynthiaSzeto.jpg"
             linkedinUrl="https://www.linkedin.com/in/cynthiaszeto/"
             email="cynthiaszeto@ucla.edu"
           />
