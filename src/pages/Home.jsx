@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 
 const sliderItems = [
   {
-    title: 'Campus community',
+    title: 'Plot Number 1',
     caption: 'Connections and conversations that shape student life.',
     gradient: 'linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%)'
   },
   {
-    title: 'Daily rituals',
+    title: 'Plot Number 2',
     caption: 'Moments of calm, study, and scrolling between classes.',
     gradient: 'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)'
   },
   {
-    title: 'Global voices',
+    title: 'Plot Number 3',
     caption: 'Students across borders comparing digital habits.',
     gradient: 'linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%)'
   }
@@ -37,7 +37,8 @@ export default function Home() {
       </header>
 
       <article className="home-card stack">
-        <h2>Introduction Text</h2>
+        <h2>Introduction To Our Project</h2>
+        <h3>Rising Use, Rising Concerns</h3>
         <p>
           Do you ever find yourself doom-scrolling? Do you ever feel like you are missing out on seeing other people&apos;s posts?
           How does this make you feel? The usage of social media is on the rise nowadays, but so are mental health issues such as
@@ -54,6 +55,7 @@ export default function Home() {
           such as sleep hours and relationship status, which can all contribute towards negative mental health. Together, these questions
           allow for a deeper examination of how mental health conditions develop within college life.
         </p>
+        <h3>A Nuanced Relationship</h3>
         <p>
           Our literature review has highlighted that social media and mental health have a complex relationship that cannot be categorized
           as either good or bad. The general consensus is that the relationship is not purely negative, but does have significant risks and
@@ -74,6 +76,7 @@ export default function Home() {
           of data and results. This leaves critical questions about how different types of social media behavior affect students over time, which
           groups are most vulnerable, and how design features in media platforms impact these outcomes.
         </p>
+        <h3>Why This Work Matters</h3>
         <p>
           This project has a significant impact because it addresses the current "hot topics" of society: the rise of social media and the rise of
           discussion on mental health issues. This project connects the two topics together to draw useful patterns that may serve as an advisory for
@@ -92,7 +95,6 @@ export default function Home() {
 
       <article className="home-card stack">
         <h2>Research Questions</h2>
-        <p className="muted">Our research questions are:</p>
         <ol className="research-list">
           <li>How is a student&apos;s demographics (age, gender, state) related to their mental health severity?</li>
           <li>How does relationship status, sleeping hours, student status relate to social media addiction, measured by average daily use of social media?</li>
