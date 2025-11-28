@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
+import FbPost from '../components/FbPost.jsx'
 import TeamMemberCard from '../components/TeamMemberCard.jsx'
 
 export default function AboutUs() {
+  const randomBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+  const [engagement] = useState(() => ({
+    project: { likes: randomBetween(110, 620), comments: randomBetween(8, 80), shares: randomBetween(4, 50) },
+    sources: { likes: randomBetween(90, 520), comments: randomBetween(6, 70), shares: randomBetween(3, 40) },
+    processing: { likes: randomBetween(90, 520), comments: randomBetween(6, 70), shares: randomBetween(3, 40) },
+    narrative: { likes: randomBetween(90, 520), comments: randomBetween(6, 70), shares: randomBetween(3, 40) }
+  }))
+
   return (
     <section className="stack">
       <h1>About Us</h1>
 
-      {/* What went into our project */}
-      <article className="card">
-        <h2>What went into our project?</h2>
+      <FbPost
+        title="What went into our project?"
+        likes={engagement.project.likes}
+        comments={engagement.project.comments}
+        shares={engagement.project.shares}
+      >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
           ultricies velit. Donec id justo id nunc bibendum dapibus. Vestibulum
@@ -20,42 +32,51 @@ export default function AboutUs() {
           eu vehicula nibh risus non magna. Sed vitae tellus at urna volutpat
           rhoncus. Curabitur euismod vel felis non pretium.
         </p>
-      </article>
+      </FbPost>
 
-      {/* Selecting our sources */}
-      <article className="card">
-        <h2>Selecting our sources</h2>
+      <FbPost
+        title="Selecting our sources"
+        likes={engagement.sources.likes}
+        comments={engagement.sources.comments}
+        shares={engagement.sources.shares}
+      >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
           volutpat feugiat nisl, a facilisis turpis fermentum non. Pellentesque
           ac turpis dictum, tincidunt lectus vitae, pulvinar arcu. Etiam ac
           lectus vitae neque lobortis aliquet.
         </p>
-      </article>
+      </FbPost>
 
-      {/* Processing our data */}
-      <article className="card">
-        <h2>Processing our data</h2>
+      <FbPost
+        title="Processing our data"
+        likes={engagement.processing.likes}
+        comments={engagement.processing.comments}
+        shares={engagement.processing.shares}
+      >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id
           posuere ante. Vivamus tincidunt, mauris at imperdiet porttitor, arcu
           erat gravida augue, sed rhoncus libero nibh sed risus. Integer sed
           nisi at metus maximus finibus.
         </p>
-      </article>
+      </FbPost>
 
-      {/* Presenting our narrative */}
-      <article className="card">
-        <h2>Presenting our narrative</h2>
+      <FbPost
+        title="Presenting our narrative"
+        likes={engagement.narrative.likes}
+        comments={engagement.narrative.comments}
+        shares={engagement.narrative.shares}
+      >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac
           habitasse platea dictumst. Sed quis lobortis erat. Suspendisse
           potenti. Vivamus congue, lorem at bibendum ultrices, dolor lacus
           facilisis velit, id lobortis lacus sem ut nisi.
         </p>
-      </article>
+      </FbPost>
 
-      {/* Meet the Team */}
+      {/* Meet the Team (unchanged) */}
       <section className="stack">
         <h2>Meet the Team</h2>
 
