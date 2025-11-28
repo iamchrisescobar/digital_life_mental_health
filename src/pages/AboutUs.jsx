@@ -96,7 +96,7 @@ export default function AboutUs() {
             name="Jiahong Chen"
             yearMajor="Second-year Statistics and Data Science"
             role="Data Visualization"
-            imgSrc="https://placehold.co/320x320/png?text=Headshot"
+            imgSrc="images/team/JiahongChen.jpg"
             linkedinUrl="https://www.linkedin.com/in/jiahong-chen-760139331/"
             email="jiahongchen13@g.ucla.edu"
           />
