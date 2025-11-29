@@ -162,6 +162,29 @@ export default function AboutUs() {
           />
         </div>
       </section>
+      <section className="stack">
+        <h2>Special Acknowledgments</h2>
+        <p>
+          As a team, we would like to thank:
+        </p>
+        <p>
+          <strong>Professor Kurtz:</strong> Thank you for your insightful lectures and constant support throughout the quarter.
+          We loved your passion for digital humanities. You have introduced us to digital humanities methods 
+          and visualisation tools such as Tablue, Timeline JS, and Voyant, which have allowed us to meaningfully 
+          explore our dataset. Thank you for your encouragement and patience.
+        </p>
+        <p>
+         <strong>Pietro Santachiara:</strong> Thank you for your patience in the discussion section and for walking us through 
+          the technical side of this project. Your feedback on our analyses and visualisations helped us clarify 
+          our argument about social media and young adults’ mental health, and your encouragement made the DH tools 
+          feel much less intimidating.
+        </p>
+        <p>
+          <strong>Kai Nham:</strong> Thank you for your support throughout this project and for always being willing to
+          troubleshoot our ideas with us. Your clear explanations, prompt help with our questions, and thoughtful 
+          comments on our drafts greatly improved both our DH site and our understanding of the topic.
+        </p>
+      </section>
     </section>
   )
 }
