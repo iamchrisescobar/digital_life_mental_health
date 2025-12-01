@@ -8,7 +8,8 @@ export default function AboutUs() {
     project: { likes: randomBetween(110, 620), comments: randomBetween(8, 80), shares: randomBetween(4, 50) },
     sources: { likes: randomBetween(90, 520), comments: randomBetween(6, 70), shares: randomBetween(3, 40) },
     processing: { likes: randomBetween(90, 520), comments: randomBetween(6, 70), shares: randomBetween(3, 40) },
-    narrative: { likes: randomBetween(90, 520), comments: randomBetween(6, 70), shares: randomBetween(3, 40) }
+    narrative: { likes: randomBetween(90, 520), comments: randomBetween(6, 70), shares: randomBetween(3, 40) },
+    acknowledgments: { likes: randomBetween(120, 540), comments: randomBetween(6, 50), shares: randomBetween(3, 24) }
   }))
 
   return (
@@ -162,29 +163,49 @@ export default function AboutUs() {
           />
         </div>
       </section>
-      <section className="stack">
-        <h2>Special Acknowledgments</h2>
-        <p>
-          As a team, we would like to thank:
-        </p>
-        <p>
-          <strong>Professor Kurtz:</strong> Thank you for your insightful lectures and constant support throughout the quarter.
-          We loved your passion for digital humanities. You have introduced us to digital humanities methods 
-          and visualisation tools such as Tablue, Timeline JS, and Voyant, which have allowed us to meaningfully 
-          explore our dataset. Thank you for your encouragement and patience.
-        </p>
-        <p>
-         <strong>Pietro Santachiara:</strong> Thank you for your patience in the discussion section and for walking us through 
-          the technical side of this project. Your feedback on our analyses and visualisations helped us clarify 
-          our argument about social media and young adults’ mental health, and your encouragement made the DH tools 
-          feel much less intimidating.
-        </p>
-        <p>
-          <strong>Kai Nham:</strong> Thank you for your support throughout this project and for always being willing to
-          troubleshoot our ideas with us. Your clear explanations, prompt help with our questions, and thoughtful 
-          comments on our drafts greatly improved both our DH site and our understanding of the topic.
-        </p>
-      </section>
+      <FbPost
+        title="Special Acknowledgments"
+        likes={engagement.acknowledgments.likes}
+        comments={engagement.acknowledgments.comments}
+        shares={engagement.acknowledgments.shares}
+      >
+        <p>As a team, we would like to thank the mentors who guided this project.</p>
+        <div className="fb-comments">
+          <div className="fb-comment">
+            <div className="fb-comment-avatar">PK</div>
+            <div>
+              <p className="fb-comment-title">Professor Kurtz</p>
+              <p className="fb-comment-body">
+                Thank you for your insightful lectures and constant support throughout the quarter. You introduced us to
+                digital humanities methods and visualization tools like Tableau, TimelineJS, and Voyant, which let us explore
+                our dataset meaningfully. We loved your passion for digital humanities and your encouragement and patience.
+              </p>
+            </div>
+          </div>
+          <div className="fb-comment">
+            <div className="fb-comment-avatar">PS</div>
+            <div>
+              <p className="fb-comment-title">Pietro Santachiara</p>
+              <p className="fb-comment-body">
+                Thank you for your patience in the discussion section and for walking us through the technical side of this
+                project. Your feedback on our analyses and visualizations helped us clarify our argument about social media
+                and young adults' mental health, and your encouragement made the DH tools feel much less intimidating.
+              </p>
+            </div>
+          </div>
+          <div className="fb-comment">
+            <div className="fb-comment-avatar">KN</div>
+            <div>
+              <p className="fb-comment-title">Kai Nham</p>
+              <p className="fb-comment-body">
+                Thank you for your support throughout this project and for always being willing to troubleshoot our ideas.
+                Your clear explanations, prompt help with our questions, and thoughtful comments on our drafts greatly
+                improved both our DH site and our understanding of the topic.
+              </p>
+            </div>
+          </div>
+        </div>
+      </FbPost>
     </section>
   )
 }
