@@ -17,7 +17,7 @@ export default function AboutUs() {
       <h1>About Us</h1>
 
       <FbPost
-        title="What went into our project? How were source selected?"
+        title="What went into our project? How were sources selected?"
         likes={engagement.project.likes}
         comments={engagement.project.comments}
         shares={engagement.project.shares}
