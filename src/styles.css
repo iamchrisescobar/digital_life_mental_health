@@ -258,6 +258,35 @@ h3 { margin: 0 0 6px; }
 /* About page helpers */
 .muted { color: var(--muted); }
 
+.bibliography {
+  display: grid;
+  gap: 10px;
+}
+
+.bib-card {
+  padding: 20px;
+}
+
+.bib-citation {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.bib-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 8px 0 0;
+  font-weight: 700;
+}
+
+.annotation {
+  margin: 15px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 /* Team grid - responsive columns */
 .team-grid {
   display: grid;
