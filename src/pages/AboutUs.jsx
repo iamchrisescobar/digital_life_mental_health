@@ -93,10 +93,25 @@ export default function AboutUs() {
         shares={engagement.narrative.shares}
       >
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac
-          habitasse platea dictumst. Sed quis lobortis erat. Suspendisse
-          potenti. Vivamus congue, lorem at bibendum ultrices, dolor lacus
-          facilisis velit, id lobortis lacus sem ut nisi.
+          For the presentation level, we designed a GitHub website that guides users through our research 
+          questions, methods, data visualizations, and interpretations. During planning meetings, we sketched 
+          out the site architecture, deciding on key pages (Homepage, methods, findings with embedded Tableau 
+          visualizations, timeline, and reflections) and how visitors would navigate between them. Inspired 
+          by DH guidance that emphasizes user experience and narrative flow. We structured the site to move 
+          from context (why these questions matter) to data (what we found) to interpretation (what it means 
+          for understanding social media and mental health among young adults).
+        </p>
+        <p>
+          We embedded our Tableau visualizations and TimelineJS timeline directly into the site so that users 
+          can interact with the data themselves. For example, by filtering by demographic group or hovering over 
+          data points to see exact values. To maintain coherence, we agreed on a consistent color palette, 
+          font choices, and layout elements across pages, which helped signal that the different components 
+          belong to a single argument. We wrote concise captions and explanatory text alongside each visualization, 
+          connecting what visitors see on screen to the broader debates about social media addiction and mental 
+          health described in our sources. After individual team members created and drafted their assigned 
+          sections, we met to revise the site as a group, focusing on clarity, accessibility, and tone. 
+          This collaborative, iterative approach reflects a common DH emphasis on project-based work, where 
+          presentation is not an afterthought but a core part of how the research question is answered and shared.
         </p>
       </FbPost>
 
