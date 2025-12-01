@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import FbPost from '../components/FbPost.jsx'
+import TableauEmbed from '../components/TableauEmbed.jsx'
 
 const sliderItems = [
   {
@@ -60,6 +61,15 @@ export default function Home() {
           and the voices of our peers.
         </p>
       </header>
+      <div className="stack">
+        <TableauEmbed
+          title="Global Mental Health Score"
+          path="shared/MG72BC7X9"
+          staticImage="https://public.tableau.com/static/images/MG/MG72BC7X9/1.png"
+          toolbar="yes"
+          heightRatio={0.75}
+        />
+      </div>
 
       <FbPost
         title="Introduction To Our Project"
