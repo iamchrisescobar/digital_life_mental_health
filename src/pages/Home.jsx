@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import FbPost from '../components/FbPost.jsx'
 import TableauEmbed from '../components/TableauEmbed.jsx'
+import TimelineEmbed from '../components/TimelineEmbed.jsx'
 
 const sliderItems = [
   {
@@ -162,17 +163,8 @@ export default function Home() {
         shares={engagement.timeline.shares}
         bodyClassName="timeline-card"
       >
-        <p>on Social Media main events throughout the past years</p>
-        <div className="timeline-placeholder">
-          <div className="timeline-track">
-            <span className="timeline-dot" />
-            <span className="timeline-dot" />
-            <span className="timeline-dot" />
-            <span className="timeline-dot" />
-            <span className="timeline-dot" />
-          </div>
-          <p className="muted small">Timeline interactions coming soon</p>
-        </div>
+        <p className="muted">Explore key social media moments over the past years.</p>
+        <TimelineEmbed />
       </FbPost>
 
       <FbPost
