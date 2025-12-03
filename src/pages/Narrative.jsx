@@ -1,4 +1,5 @@
 import React from "react";
+import TableauEmbed from "../components/TableauEmbed.jsx";
 
 export default function Narrative() {
   return (
@@ -44,7 +45,14 @@ export default function Narrative() {
 
         <div className="card stack">
           <h2>How Social Media is being Used</h2>
-          {/* TODO: Add Tableu Treemap of Social Media Platforms */}
+          <TableauEmbed
+            title="Treemap of Social Media Platforms"
+            path="views/media_addiction/Treemap"
+            staticImage="https://public.tableau.com/static/images/me/media_addiction/Treemap/1.png"
+            toolbar="yes"
+            heightRatio={0.75}
+            params={{ tabs: "no" }}
+          />
           <p>
             It is extremely important to consider how students are utilizing
             social media. From the treemap we can see that out of all the
