@@ -5,6 +5,7 @@ import Home from './pages/Home.jsx'
 import DataCritique from './pages/DataCritique.jsx'
 import AboutUs from './pages/AboutUs.jsx'
 import Sources from './pages/Sources.jsx'
+import Narrative from './pages/Narrative.jsx'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/data-critique" element={<DataCritique />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/narrative" element={<Narrative />} />
           <Route path="/sources" element={<Sources />} />
         </Routes>
       </main>

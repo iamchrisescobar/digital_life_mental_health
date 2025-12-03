@@ -45,6 +45,7 @@ export default function Navbar() {
         <ul className="links">
           <li><NavLink to="/" onClick={handleNavClick('/')} className={({isActive}) => isActive ? 'active' : ''}>Home</NavLink></li>
           <li><NavLink to="/data-critique" onClick={handleNavClick('/data-critique')} className={({isActive}) => isActive ? 'active' : ''}>Data Critique</NavLink></li>
+          <li><NavLink to="/narrative" onClick={handleNavClick('/narrative')} className={({isActive}) => isActive ? 'active' : ''}>Narrative</NavLink></li>
           <li><NavLink to="/about" onClick={handleNavClick('/about')} className={({isActive}) => isActive ? 'active' : ''}>About Us</NavLink></li>
           <li><NavLink to="/sources" onClick={handleNavClick('/sources')} className={({isActive}) => isActive ? 'active' : ''}>Sources</NavLink></li>
         </ul>
@@ -68,6 +69,7 @@ export default function Navbar() {
             <NavLink to="/" onClick={handleNavClick('/')} className="mobile-link">Home</NavLink>
             <NavLink to="/data-critique" onClick={handleNavClick('/data-critique')} className="mobile-link">Data Critique</NavLink>
             <NavLink to="/about" onClick={handleNavClick('/about')} className="mobile-link">About Us</NavLink>
+            <NavLink to="/narrative" onClick={handleNavClick('/narrative')} className="mobile-link">Narrative</NavLink>
             <NavLink to="/sources" onClick={handleNavClick('/sources')} className="mobile-link">Sources</NavLink>
           </div>
         )}
