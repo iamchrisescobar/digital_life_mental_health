@@ -16,11 +16,20 @@ export default function Narrative() {
             statistically significant pattern. An increase in average daily
             social media usage is associated with a decrease in reported mental
             health score. We model this decreasing trend with the trendline on
-            the graph on the right side. This correlation leads us to believe
-            that social media usage is potentially detrimental to the mental
-            health of students.
+            the graph bellow. This correlation leads us to believe that social
+            media usage is potentially detrimental to the mental health of
+            students.
           </p>
-          {/* TODO: Add MentalHealthVsSMDailyUse.png to the right of paragraph above, wrapping its text */}
+          <img
+            src="images/team/plots/MentalHealthVsSMDailyUse.png"
+            alt="Scatter plot showing mental health score trend versus daily social media use"
+            style={{
+              display: "block",
+              width: "480px",
+              maxWidth: "100%",
+              margin: "1rem auto",
+            }}
+          />
           <p>
             While this correlation is compelling, we recognize that mental
             health is a lot more complex, and social media can not be isolated
