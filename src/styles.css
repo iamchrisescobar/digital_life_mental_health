@@ -770,6 +770,13 @@ h3 { margin: 0 0 6px; }
   display: block;
 }
 
+.tableau-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
 .tableau-viz-target {
   width: 100%;
   min-height: 220px;

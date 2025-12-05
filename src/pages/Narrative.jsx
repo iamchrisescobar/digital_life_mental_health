@@ -152,22 +152,24 @@ export default function Narrative() {
 
         <div className="card stack">
           <h2>General Health</h2>
-          <TableauEmbed
-            title="Average General Health Score per State"
-            path="views/DHTabluemapofGeneralHealthandState/AverageGenralHealthdominatesperstate"
-            staticImage="https://public.tableau.com/static/images/DH/DHTabluemapofGeneralHealthandState/AverageGenralHealthdominatesperstate/1.png"
-            toolbar="yes"
-            heightRatio={0.75}
-            params={{ tabs: "no" }}
-          />
-          <TableauEmbed
-            title="High Depression Prevalence by State"
-            path="views/Depressionbystate/DepbyState"
-            staticImage="https://public.tableau.com/static/images/De/Depressionbystate/DepbyState/1.png"
-            toolbar="yes"
-            heightRatio={0.75}
-            params={{ tabs: "no" }}
-          />
+          <div className="tableau-grid">
+            <TableauEmbed
+              title="Average General Health Score per State"
+              path="views/DHTabluemapofGeneralHealthandState/AverageGenralHealthdominatesperstate"
+              staticImage="https://public.tableau.com/static/images/DH/DHTabluemapofGeneralHealthandState/AverageGenralHealthdominatesperstate/1.png"
+              toolbar="yes"
+              heightRatio={0.75}
+              params={{ tabs: "no" }}
+            />
+            <TableauEmbed
+              title="High Depression Prevalence by State"
+              path="views/Depressionbystate/DepbyState"
+              staticImage="https://public.tableau.com/static/images/De/Depressionbystate/DepbyState/1.png"
+              toolbar="yes"
+              heightRatio={0.75}
+              params={{ tabs: "no" }}
+            />
+          </div>
           <p>
             In comparing these two maps, we can analyze whether there is a
             relationship between general health and the prevalence of high
