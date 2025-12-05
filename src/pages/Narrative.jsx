@@ -152,7 +152,14 @@ export default function Narrative() {
 
         <div className="card stack">
           <h2>General Health</h2>
-          {/* TODO: add Average General Health Score per State Tableau visualization */}
+          <TableauEmbed
+            title="Average General Health Score per State"
+            path="views/DHTabluemapofGeneralHealthandState/AverageGenralHealthdominatesperstate"
+            staticImage="https://public.tableau.com/static/images/DH/DHTabluemapofGeneralHealthandState/AverageGenralHealthdominatesperstate/1.png"
+            toolbar="yes"
+            heightRatio={0.75}
+            params={{ tabs: "no" }}
+          />
           {/* TODO: add High Depression Prevalence by State Tableau visualization */}
           <p>
             In comparing these two maps, we can analyze whether there is a
