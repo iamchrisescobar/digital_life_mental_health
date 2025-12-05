@@ -160,7 +160,14 @@ export default function Narrative() {
             heightRatio={0.75}
             params={{ tabs: "no" }}
           />
-          {/* TODO: add High Depression Prevalence by State Tableau visualization */}
+          <TableauEmbed
+            title="High Depression Prevalence by State"
+            path="views/Depressionbystate/DepbyState"
+            staticImage="https://public.tableau.com/static/images/De/Depressionbystate/DepbyState/1.png"
+            toolbar="yes"
+            heightRatio={0.75}
+            params={{ tabs: "no" }}
+          />
           <p>
             In comparing these two maps, we can analyze whether there is a
             relationship between general health and the prevalence of high
