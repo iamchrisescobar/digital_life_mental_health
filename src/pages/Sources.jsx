@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const bibliography = [
   {
@@ -257,6 +258,16 @@ const bibliography = [
 ]
 
 export default function Sources() {
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (!hash) return
+    const target = document.getElementById(hash.slice(1))
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }, [hash])
+
   return (
     <section className="stack">
       <h1>Sources</h1>
@@ -268,7 +279,7 @@ export default function Sources() {
       <div className="stack bibliography">
         <h2>Annotated Bibliography</h2>
         {bibliography.map((entry) => (
-          <article key={entry.id} className="card bib-card">
+          <article key={entry.id} id={entry.id} className="card bib-card">
             <p className="bib-citation">{entry.citation}</p>
             {entry.links?.length ? (
               <div className="bib-links">

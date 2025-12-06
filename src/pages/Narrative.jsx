@@ -18,11 +18,14 @@ export default function Narrative() {
             the mental health of our students. For instance, Abi-Jaoude et al.
             concluded that smartphone and social media use are “implicated… in
             the increase in mental distress, self-injurious behavior and
-            suicidality among youth". (2020) In this context, we analyze how
-            college students’s use of social media relates to self-reported
-            mental health.
+            suicidality among youth". (
+            <Link to="/sources#abi-jaoude-2020">2020</Link>) In this context, we
+            analyze how college students’s use of social media relates to
+            self-reported mental health.
           </p>
-          <figure style={{ margin: "1rem auto", width: "100%", maxWidth: "480px" }}>
+          <figure
+            style={{ margin: "1rem auto", width: "100%", maxWidth: "480px" }}
+          >
             <img
               src="images/team/plots/MentalHealthVsSMDailyUse.png"
               alt="Scatter plot showing mental health score trend versus daily social media use"
@@ -36,7 +39,8 @@ export default function Narrative() {
                 fontSize: "0.9rem",
               }}
             >
-              Figure 1: Scatter plot showing mental health score trend versus daily social media use
+              Figure 1: Scatter plot showing mental health score trend versus
+              daily social media use
             </figcaption>
           </figure>
           <p>
