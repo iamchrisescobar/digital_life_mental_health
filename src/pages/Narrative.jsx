@@ -1,4 +1,5 @@
-import React from "react";
+﻿import React from "react";
+import { Link } from "react-router-dom";
 import TableauEmbed from "../components/TableauEmbed.jsx";
 
 export default function Narrative() {
@@ -13,33 +14,51 @@ export default function Narrative() {
         <div className="card stack">
           <h2>Introduction</h2>
           <p>
-            The initial analysis, drawn from our project’s dataset, reveals a
-            statistically significant pattern. An increase in average daily
-            social media usage is associated with a decrease in reported mental
-            health score. We model this decreasing trend with the trendline on
-            the graph bellow. This correlation leads us to believe that social
-            media usage is potentially detrimental to the mental health of
+            Recent research has raised concerns that social media may be harming
+            the mental health of our students. For instance, Abi-Jaoude et al.
+            concluded that smartphone and social media use are “implicated… in
+            the increase in mental distress, self-injurious behavior and
+            suicidality among youth". (2020) In this context, we analyze how
+            college students’s use of social media relates to self-reported
+            mental health.
+          </p>
+          <figure style={{ margin: "1rem auto", width: "100%", maxWidth: "480px" }}>
+            <img
+              src="images/team/plots/MentalHealthVsSMDailyUse.png"
+              alt="Scatter plot showing mental health score trend versus daily social media use"
+              style={{ display: "block", width: "100%" }}
+            />
+            <figcaption
+              style={{
+                textAlign: "center",
+                marginTop: "0.5rem",
+                fontStyle: "italic",
+                fontSize: "0.9rem",
+              }}
+            >
+              Figure 1: Scatter plot showing mental health score trend versus daily social media use
+            </figcaption>
+          </figure>
+          <p>
+            Our analysis shows a clear negative correlation. As average daily
+            social media usage increases, mental health score decreases (Figure
+            1). We model this pattern with the downward-slope trendline on the
+            scatterplot, which suggests that heavier social media usage is
+            potentially detrimental to the mental health of students. Although
+            correlation does not prove causation, it is consistent with growing
+            worries that social media can be detrimental to the well-being of
             students.
           </p>
-          <img
-            src="images/team/plots/MentalHealthVsSMDailyUse.png"
-            alt="Scatter plot showing mental health score trend versus daily social media use"
-            style={{
-              display: "block",
-              width: "480px",
-              maxWidth: "100%",
-              margin: "1rem auto",
-            }}
-          />
           <p>
-            While this correlation is compelling, we recognize that mental
-            health is a lot more complex, and social media can not be isolated
-            as the only cause. There are a multitude of factors to consider,
-            like academic stress, financial pressures, existing vulnerabilities,
-            and the context and content of social media engagement. Thus, we
-            have conducted further in-depth analyses of student demographics to
-            consider their impact on a person’s wellbeing and how social media
-            fits into the narrative.
+            At the same time, we recognize that mental health is a lot more
+            complex, and social media can not be isolated as the only cause.
+            There are a multitude of factors to consider, like academic stress,
+            financial pressures, existing vulnerabilities, and the context and
+            content of social media engagement. To better understand this
+            complexity, the rest of our project examines how the relationship
+            between social media and mental health varies across student
+            demographics and circumstances, including platform type, gender,
+            general health, sleep duration, and academic standing.
           </p>
         </div>
 
