@@ -461,7 +461,6 @@ export default function Narrative() {
             Figure 8: Plot displaying the average socical media use associated
             with the mental health effects based on college standings
           </figcaption>
-          {/* TODO: Add DistributionOfAcademicLevel.png */}
           <p className="muted" style={{ fontWeight: 700 }}>
             Question: What is the effect of social media on college
             underclassmen vs upperclassmen? (8)

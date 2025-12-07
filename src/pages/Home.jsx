@@ -214,6 +214,7 @@ export default function Home() {
         comments={engagement.slider.comments}
         shares={engagement.slider.shares}
       >
+        <p className="muted">Click on the visualizations to read more</p>
         <div className="slider">
           <button className="slider-btn" type="button" aria-label="Previous slide" onClick={prevSlide}>
             &lt;
