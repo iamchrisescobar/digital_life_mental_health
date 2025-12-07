@@ -183,11 +183,13 @@ export default function Narrative() {
             by Hong, Wei, et al., that results “showed no differences of scores”
             between mindfulness, rumination, and psychological distress between
             males and females (<Link to="/sources#hong-2021">Hong, 2021</Link>).
-            However, it is stated in another article we analyzed, “Shelter in the Online World? Benefits and Risks
-            Associated with Social Media Use for College Students’ Mental Health
-            in the Early Stage of COVID-19 Pandemic” by <Link to="/sources#niu-2024">Niu, Yanzhuo, et al.</Link>,
-            that female students reported higher levels of depression and
-            anxiety than male students although “gender did not moderate the
+            However, it is stated in another article we analyzed, “Shelter in
+            the Online World? Benefits and Risks Associated with Social Media
+            Use for College Students’ Mental Health in the Early Stage of
+            COVID-19 Pandemic” by{" "}
+            <Link to="/sources#niu-2024">Niu, Yanzhuo, et al.</Link>, that
+            female students reported higher levels of depression and anxiety
+            than male students although “gender did not moderate the
             relationship between social media use and mental well-being” (
             <Link to="/sources#niu-2024">Niu, 2024</Link>).
           </p>
@@ -306,6 +308,7 @@ export default function Narrative() {
             California respondents reported high depression severity.
           </p>
           {/* TODO: Add General Health and Depression Severity Tableau Visualization */}
+          {/* TODO: Add required Citations and Links*/}
           <p>
             The bar chart highlights the least amount of male and female
             students who are in an excellent general health status, while a fair
@@ -517,10 +520,9 @@ export default function Narrative() {
             problematic usage.
           </p>
           <p>
-            These hypotheses indicate that more advanced research studies can be
-            conducted in order to confirm relationships and correlations in the
-            project. For example, using secondary sources from our annotated
-            bibliograph,y such as “Understanding the Role of Social Media–Based
+            While our visualizations suggest a clear correlation, more advanced
+            research studies are necessary to confirm causal relationships. For
+            example, the article “Understanding the Role of Social Media–Based
             Mental Health Support Among College Students: Survey and
             Semistructured Interviews” by{" "}
             <Link to="/sources#vornholt-2021">
@@ -534,27 +536,23 @@ export default function Narrative() {
             “[a]n overwhelmingly large number of participants (71/101, 70.3%)
             indicated feeling stressed and/or anxious from college life…” (
             <Link to="/sources#vornholt-2021">Vornholt, Choudhury, 2024</Link>).
-            This article is an instance where sources can clarify and support
-            our research focus and data visualizations on identifying how social
-            media poses the highest mental health risks.
-          </p>
-          <p className="muted" style={{ margin: 0, fontWeight: 700 }}>
-            [Note: In the second visualization depicting the proportions of
-            students (graduate vs. undergraduate), we can see in the data that
-            the number of students is relatively equivalent; this helps indicate
-            that older students generally tend to use social media less compared
-            to their underclassmen peers.]
+            This statistic adds another layer to our analysis, indicating that
+            high pre-existing stress levels among the college population may be
+            making them more vulnerable to the negative aspects of social media.
+            It also highlights how social media is never the single cause of
+            poor mental health, as there are a multitude of factors that
+            contribute to depression and anxiety.
           </p>
           <p>
             However, there are still limitations in the dataset. First, this
             study could be explored in greater depth by examining differences in
             mental health scores across more specific academic levels (e.g.,
-            freshmen, sophomores, juniors, and seniors). Second, as shown in the
-            second visualization, the number of high school students surveyed is
-            significantly lower than that of undergraduate and graduate
-            students. This smaller sample size weakens the reliability of our
-            conclusions for this group and indicates a need for further
-            research.
+            freshmen, sophomores, juniors, and seniors). Second, the number of
+            high school students surveyed within the dataset is significantly
+            lower than that of undergraduate and graduate students. This smaller
+            sample size weakens the reliability of our conclusions for this
+            group and indicates a need for further research focused on that
+            specific population.
           </p>
         </div>
       </div>
