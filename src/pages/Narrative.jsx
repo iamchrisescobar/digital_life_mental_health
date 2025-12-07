@@ -76,65 +76,99 @@ export default function Narrative() {
             heightRatio={0.75}
             params={{ tabs: "no" }}
           />
+          <figcaption
+            style={{
+              textAlign: "center",
+              marginTop: "0.5rem",
+              fontStyle: "italic",
+              fontSize: "0.9rem",
+            }}
+          >
+            Figure 2: Treemap showing the average daily use and mental health
+            scores for different social media platforms
+          </figcaption>
           <p>
-            It is extremely important to consider how students are utilizing
-            social media. From the treemap we can see that out of all the
+            It is important to consider the specific social media platforms that
+            students are using on a daily basis. To summarize this data, we
+            create a treemap. From the treemap we can see that out of all the
             students in this dataset, students spend more time using platforms
             such as WhatsApp, Tiktok, WeChat. These platforms contain features
-            such as messaging, calling, and creating/viewing reels. We may be
-            able to suspect this is the reason why college students spend an
+            such as messaging, calling, and creating/viewing reels. We can
+            suspect that this may be the reason why college students spend an
             increased average of time utilizing these platforms.
           </p>
+          {/* TODO: Add Nguyen, 2025 source and citation link*/}
           <p>
             The treemap also reveals that the more time a student spends on
             social media, the lower their mental health score is. This is shown
-            by the lighter colors of WhatsApp, TikTok, Snapchat, and KakaoTalk.
-            Most of these platforms are messaging platforms with features such
-            as streaming reels and postings as well. This might be a factor that
-            lowers students’ mental health scores. On the other hand, platforms
-            such as Line and LinkedIn have users reporting a relatively higher
-            mental health score due to the limited features of these
-            applications.
+            by the lighter colors of TikTok, Snapchat, and Instagram. These
+            platforms have features such as reels, posts, and story sharing.
+            Studies have shown that platforms that involve short videos and
+            reels are actively lowering the mental health status and cognitive
+            functioning for adults and youths (Nguyen, 2025). Some contents also
+            involve negative messages of body image and self-esteem, which
+            further impact youths and young adults negatively. On the other
+            hand, platforms such as Line and LinkedIn have users reporting a
+            relatively higher mental health score due to the limited features of
+            these applications.
           </p>
           <p>
-            Another pattern that is evident is that platforms such as WhatsApp,
-            KakaoTalk, and WeChat are popular platforms used by international
-            students. These students are far away from home and may have
-            negative emotions due to missing their families. This may be a
-            factor that contributes to the lower mental health score. Further
-            analysis should be done to investigate the features of each social
-            media platform and see if there is any correlation.
+            Another pattern is that platforms such as WhatsApp, KakaoTalk, and
+            WeChat are popular platforms used by international students. These
+            students are far away from home and may have negative emotions due
+            to missing their families. This may be a factor that contributes to
+            the lower mental health score.
           </p>
         </div>
 
         <div className="card stack">
           <h2>Gender</h2>
-          {/* TODO: add Average Depression Totals by Gender Tableau  visualization with note: Graph 1: Average Depression Totals by Gender  */}
-          {/* TODO: add Anxiety SeverityByGender.png plot (First ask Cynthia for the png) */}
-          <p className="muted" style={{ margin: 0, fontWeight: 700 }}>
-            Question: How do mental health challenges differ across genders? /
-            What could be the causes of the differences? (1)
+          <TableauEmbed
+            title="Average Depression Totals by Gender"
+            path="AverageDepressionTotalsbyGenderGendervs_MentalHealthRelationshipGENDERDISTRIBUTION/GenderBarPlot-AverageDepression"
+            staticImage="https://public.tableau.com/static/images/Av/AverageDepressionTotalsbyGenderGendervs_MentalHealthRelationshipGENDERDISTRIBUTION/GenderBarPlot-AverageDepression/1.png"
+            toolbar="yes"
+            heightRatio={0.75}
+            params={{ tabs: "no" }}
+          />
+          <figcaption
+            style={{
+              textAlign: "center",
+              marginTop: "0.5rem",
+              fontStyle: "italic",
+              fontSize: "0.9rem",
+            }}
+          >
+            Figure 3: Plot showing average depression level reported by gender
+          </figcaption>
+
+          <p className="muted" style={{ fontWeight: 700 }}>
+            Research Question: How do mental health challenges differ across
+            genders? / What could be the causes of the differences? (1)
           </p>
           <p>
-            In response to the research question (1) in the context of our
-            project, we can answer the question "How do mental health challenges
-            differ across genders?” by comparing the depression severity
-            percentages calculated above, then comparing them between males and
-            females. The bar chart is separated into two different groups which
-            is by gender and then by another category containing metadata or the
-            different types of average depression scores determining the phq9
-            (depression) severity. Nonetheless, we can see that the ratios for
-            more “severe depression ratios” based on the percentages are
-            moderately substantially higher for females (17.45%) compared to
-            males (12.91%). The percentages for “mild depression” also differ,
-            with 4-5% at 20.90% for females and 24.14% for males.
+            This then leads us to question if one of the most common attributes,
+            gender, may be a significant variable in differentiating mental
+            health scores. In response to the research question (1) in the
+            context of our project, we can answer the question "How do mental
+            health challenges differ across genders?” by comparing the
+            depression severity percentages calculated above, then comparing
+            them between males and females. The bar chart is separated into two
+            different groups which is by gender and then by another category
+            containing metadata or the different types of average depression
+            scores determining the phq9 (depression) severity. Nonetheless, we
+            can see that the ratios for more “severe depression ratios” based on
+            the percentages are moderately substantially higher for females
+            (17.45%) compared to males (12.91%). The percentages for “mild
+            depression” also differ, with 4-5% at 20.90% for females and 24.14%
+            for males.
           </p>
           <p>
             Meanwhile, each of the other depression categories, respectively to
             each gender, is relatively equivalent as they only deviate around
             1-1.5% from one another. This allows us to consider that mental
-            health challenges differ slightly between males and females slightly
-            as the data indicates that females have reported experiencing higher
+            health challenges differ slightly between males and females as the
+            data indicates that females have reported experiencing higher
             percentages of severe depression and lower levels of mild (not
             severe) depression compared to male students.
           </p>
@@ -148,50 +182,99 @@ export default function Narrative() {
             Mediating Role of Rumination and the Moderating Role of Mindfulness”
             by Hong, Wei, et al., that results “showed no differences of scores”
             between mindfulness, rumination, and psychological distress between
-            males and females (Hong, 2021). However, it is stated in another
-            article I analyzed in the bibliography, “Shelter in the Online
-            World? Benefits and Risks Associated with Social Media Use for
-            College Students’ Mental Health in the Early Stage of COVID-19
-            Pandemic” by Niu, Yanzhuo, et al., that female students reported
-            higher levels of depression and anxiety than male students although
-            “gender did not moderate the relationship between social media use
-            and mental well-being” (Niu, 2024).
+            males and females (<Link to="/sources#hong-2021">Hong, 2021</Link>).
+            However, it is stated in another article we analyzed, “Shelter in the Online World? Benefits and Risks
+            Associated with Social Media Use for College Students’ Mental Health
+            in the Early Stage of COVID-19 Pandemic” by <Link to="/sources#niu-2024">Niu, Yanzhuo, et al.</Link>,
+            that female students reported higher levels of depression and
+            anxiety than male students although “gender did not moderate the
+            relationship between social media use and mental well-being” (
+            <Link to="/sources#niu-2024">Niu, 2024</Link>).
+          </p>
+          <p>
+            It is also stated that “[in] a randomized study…female participants
+            reported more negative mood after just 10 minutes of browsing their
+            Facebook account compared with those who browsed an
+            appearance-neutral control website” or a website [including games]
+            that does not focus on physical attractiveness or beauty ideals,
+            meaning that social media tends to generate a “toxic” environment
+            which may associate with more negative scores (
+            <Link to="/sources#abi-jaoude-2020">Abi-Jaoude, 2020</Link>).
+            Additionally, “...Girls and young women tend to spend more time on
+            social media than boys do” and tend to “have more exposure to
+            cyberbullying and show tendency to experience more mental health
+            effects, which is consistent with recent epidemiologic trends
+            indicating that depressive symptoms, self-harm and suicidality have
+            increased among young females in particular” (
+            <Link to="/sources#abi-jaoude-2020">Abi-Jaoude, 2020</Link>). This
+            can be accounted for in the chart as we can see slightly more
+            reports of female severe depression.
           </p>
           <p>
             Therefore, it can be assumed that the causes of the differences
-            \[where females have shown to have slightly more negative higher
-            mental health results\] could also stem from other factors such as
+            [where females have shown to have slightly more negative higher
+            mental health results] could also stem from other factors such as
             cultural expectations and social pressure, menstrual cycles,
             academic stress, or working conditions for example that could
             influence further stress although there needs to be more research
-            done to reach a conclusion due to varying datasets.
+            done to reach a conclusion due to varying datasets. However, the
+            general consensus is that there is not enough significant evidence
+            to explicitly say that gender is the leading variable in shifting
+            mental health scores.
           </p>
           <p className="muted" style={{ marginBottom: 0 }}>
-            Example computation: (658 + 880 + 1238 + 206 + 788) = 3770 total
-            female PHQ-9 scores. 658 / 3770 = 0.1745 or 17.45% for severe
-            depression.
+            Example Computation of the Proportions: Summing female phq9_comp
+            scores: (658 + 880 + 1238 + 206 + 788) = 3770 total female PHQ-9
+            scores. 658 / 3770 = 0.1745 or 17.45% for “Severe Depression”,
+            etc...
           </p>
         </div>
 
         <div className="card stack">
           <h2>General Health</h2>
           <div className="tableau-grid">
-            <TableauEmbed
-              title="Average General Health Score per State"
-              path="views/DHTabluemapofGeneralHealthandState/AverageGenralHealthdominatesperstate"
-              staticImage="https://public.tableau.com/static/images/DH/DHTabluemapofGeneralHealthandState/AverageGenralHealthdominatesperstate/1.png"
-              toolbar="yes"
-              heightRatio={0.75}
-              params={{ tabs: "no" }}
-            />
-            <TableauEmbed
-              title="High Depression Prevalence by State"
-              path="views/Depressionbystate/DepbyState"
-              staticImage="https://public.tableau.com/static/images/De/Depressionbystate/DepbyState/1.png"
-              toolbar="yes"
-              heightRatio={0.75}
-              params={{ tabs: "no" }}
-            />
+            <div>
+              <TableauEmbed
+                title="Average General Health Score per State"
+                path="views/DHTabluemapofGeneralHealthandState/AverageGenralHealthdominatesperstate"
+                staticImage="https://public.tableau.com/static/images/DH/DHTabluemapofGeneralHealthandState/AverageGenralHealthdominatesperstate/1.png"
+                toolbar="yes"
+                heightRatio={0.75}
+                params={{ tabs: "no" }}
+              />
+              <figcaption
+                style={{
+                  textAlign: "center",
+                  marginTop: "0.5rem",
+                  fontStyle: "italic",
+                  fontSize: "0.9rem",
+                }}
+              >
+                Figure 4: Map showing the average mental health scores reported
+                by state
+              </figcaption>
+            </div>
+            <div>
+              <TableauEmbed
+                title="High Depression Prevalence by State"
+                path="views/Depressionbystate/DepbyState"
+                staticImage="https://public.tableau.com/static/images/De/Depressionbystate/DepbyState/1.png"
+                toolbar="yes"
+                heightRatio={0.75}
+                params={{ tabs: "no" }}
+              />
+              <figcaption
+                style={{
+                  textAlign: "center",
+                  marginTop: "0.5rem",
+                  fontStyle: "italic",
+                  fontSize: "0.9rem",
+                }}
+              >
+                Figure 5: Map showing the high depression prevalence reported by
+                state
+              </figcaption>
+            </div>
           </div>
           <p>
             In comparing these two maps, we can analyze whether there is a
@@ -223,7 +306,6 @@ export default function Narrative() {
             California respondents reported high depression severity.
           </p>
           {/* TODO: Add General Health and Depression Severity Tableau Visualization */}
-          {/* TODO: Add Effect of Social Media on General Health for Males and Females plot (First need ask Marina for png) */}
           <p>
             The bar chart highlights the least amount of male and female
             students who are in an excellent general health status, while a fair
@@ -247,57 +329,149 @@ export default function Narrative() {
 
         <div className="card stack">
           <h2>Sleep Hours</h2>
-          {/* TODO: add plot on how number of house spent on social media affects average sleep hours (Ask Marina to fix typo in title, capitalization and if not interactive, for a PNG) */}
-          {/* TODO: add plot on Relationship of Sleep Hours and Avg Social Media Use Hours. (JiahongViz3.png) */}
+          <div className="tableau-grid">
+            <div>
+              <figure
+                style={{
+                  margin: "1rem auto",
+                  width: "100%",
+                  maxWidth: "480px",
+                }}
+              >
+                <img
+                  src="images/team/plots/Fig6.png"
+                  style={{ display: "block", width: "100%" }}
+                />
+                <figcaption
+                  style={{
+                    textAlign: "center",
+                    marginTop: "0.5rem",
+                    fontStyle: "italic",
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  Figure 6: Scatter plot showing relationship between sleep
+                  hours per night and average social media daily usage expressed
+                  in hours
+                </figcaption>
+              </figure>
+            </div>
+            <div>
+              <figure
+                style={{
+                  margin: "1rem auto",
+                  width: "100%",
+                  maxWidth: "480px",
+                }}
+              >
+                <img
+                  src="images/team/plots/Fig7.png"
+                  style={{ display: "block", width: "100%" }}
+                />
+                <figcaption
+                  style={{
+                    textAlign: "center",
+                    marginTop: "0.5rem",
+                    fontStyle: "italic",
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  Figure 7: Plot displaying the relationship between mental
+                  health score and sleep hours reported per night
+                </figcaption>
+              </figure>
+            </div>
+          </div>
           <p>
-            This histogram illustrates the relationship between average daily
-            social-media usage and average nightly sleep duration among young
-            adults. By grouping usage into continuous intervals, the
-            visualization reveals a clear downward trend: as social-media use
-            increases, average sleep hours decrease. Individuals using about
-            1.5–3 hours per day sleep around 8 hours per night, while those
-            using 7.5–9 hours sleep only about 4 hours. The histogram,
-            therefore, demonstrates a strong inverse relationship between
-            social-media use and sleep duration.
+            The scatterplot shows individual observations, and the regression
+            line further clarifies the trend. The put between usage time and
+            sleep hours display a clear downward pattern, with a negatively
+            sloped trend line that is consistent with the histogram’s findings.
+            However, several data points deviate noticeably from the line—for
+            example, some individuals with about 4.5 hours of social-media use
+            report only 4 hours of sleep. This indicates that although a
+            negative correlation exists, sleep outcomes still vary depending on
+            individual habits and time management.
           </p>
           <p>
-            While the histogram provides an overall picture, the scatterplot
-            shows individual observations, and the regression line further
-            clarifies the trend. The points display a clear downward pattern,
-            with a negatively sloped trend line that is consistent with the
-            histogram’s findings. However, several data points deviate
-            noticeably from the line—for example, some individuals with about
-            4.5 hours of social-media use report only 4 hours of sleep. This
-            indicates that although a negative correlation exists, sleep
-            outcomes still vary depending on individual habits and time
-            management.
+            After identifying the negative correlation between usage time and
+            sleep hours, another scatterplot is plotted between sleep hours and
+            mental health score to investigate its relation to mental health
+            indicator. From the figure, the data points are scattered around the
+            positive slope trend line. This shows that as sleep hours increase,
+            mental health scores also increase, indicating better mental health
+            conditions.
           </p>
+          {/* TODO: Add Kaylin and Wood sources and in-text citations*/}
           <p>
             This strong trend supports our research thesis that excessive
             social-media use disrupts healthy sleep patterns among college
-            students, contributing to mental-health issues. Reduced sleep
-            increases the risk of anxiety, depression, and poor cognitive and
-            academic performance. The visualization helps demonstrate how
-            social-media addiction relates to sleep deprivation and decreased
-            psychological well-being in young adults. Consistent with Twenge et
-            al. (2018) and Kaylin (2025), high social-media engagement is
-            strongly linked to poorer mental health and sleep outcomes,
-            indirectly harming academic performance. Screen exposure at night
-            may further suppress melatonin production and increase health risks.
-            Therefore, interventions promoting digital wellness and screen
-            curfews could improve students’ mental health, academic performance,
-            and overall well-being.
+            students, contributing to mental-health issues.The visualization
+            helps demonstrate how social-media addiction relates to sleep
+            deprivation and decreased psychological well-being in young adults.
+            Consistent with Twenge et al. (
+            <Link to="/sources#twenge-2018">2018</Link>) and Kaylin (2025), high
+            social-media engagement is strongly linked to poorer mental health
+            and sleep outcomes, indirectly harming academic performance. Reduced
+            sleep increases the risk of anxiety, depression, and poor academic
+            performance. Screen exposure at night may further suppress melatonin
+            production and increase health risks (Wood et al., 2013). Therefore,
+            interventions promoting digital wellness and screen curfews could
+            improve students’ mental health, academic performance, and overall
+            well-being.
           </p>
         </div>
 
         <div className="card stack">
           <h2>Student Standing</h2>
-          {/* TODO: Add Tableau Visualization on Avg Social Medi Use Associated with Mental Health Effects based on College Standing */}
+          <TableauEmbed
+            title="Avg Social Media Use Associated with Mental Health Effects based on College Standing"
+            path="AvgSocialMediaUseAssociatedwithMentalHealthEffectsbasedonCollegeStanding/AvgSocialMediaUseAssociatedwithMentalHealthEffectsbasedonCollegeStanding"
+            staticImage="https://public.tableau.com/static/images/Av/AvgSocialMediaUseAssociatedwithMentalHealthEffectsbasedonCollegeStanding/AvgSocialMediaUseAssociatedwithMentalHealthEffectsbasedonCollegeStanding/1.png"
+            toolbar="yes"
+            heightRatio={0.75}
+            params={{ tabs: "no" }}
+          />
+          <figcaption
+            style={{
+              textAlign: "center",
+              marginTop: "0.5rem",
+              fontStyle: "italic",
+              fontSize: "0.9rem",
+            }}
+          >
+            Figure 8: Plot displaying the average socical media use associated
+            with the mental health effects based on college standings
+          </figcaption>
           {/* TODO: Add DistributionOfAcademicLevel.png */}
-          <p className="muted" style={{ margin: 0, fontWeight: 700 }}>
+          <p className="muted" style={{ fontWeight: 700 }}>
             Question: What is the effect of social media on college
             underclassmen vs upperclassmen? (8)
           </p>
+          <figure
+            style={{
+              margin: "1rem auto",
+              width: "100%",
+              maxWidth: "480px",
+            }}
+          >
+            <img
+              src="images/team/plots/Fig9.png"
+              style={{ display: "block", width: "100%" }}
+            />
+            <figcaption
+              style={{
+                textAlign: "center",
+                marginTop: "0.5rem",
+                fontStyle: "italic",
+                fontSize: "0.9rem",
+              }}
+            >
+              Figure 9: Histogram displaying the relationship between average
+              mental health score and social media usage reported by academic
+              level
+            </figcaption>
+          </figure>
           <p>
             From the line chart, across all three academic groups (High School,
             Undergraduate, Graduate), the lines show a consistent negative
@@ -312,27 +486,35 @@ export default function Narrative() {
             are generally happier or have better mental health reports than high
             school students.
           </p>
-
           <p>
             The visualization ultimately helps us examine how vulnerability to
-            social media impact may vary depending on a student's stage in
-            college, which leads to more questions on why graduate students may
-            spend less time on social media.
+            social media may vary depending on a student's stage in college and
+            age, which leads to more questions on why these differences are
+            present. Based on the graph, underclassmen show significantly lower
+            mental health scores at higher usage levels compared to
+            upperclassmen, suggesting that students in their early college days
+            present greater emotional and social adjustment challenges, whether
+            it be feeling isolated due to an environment change or overwhelming
+            social anxiety. According to Shannon et al., “youth are more at risk
+            for facing cyberbullying, finding it difficult to disengage from the
+            media and allowing it to interfere with their social relationships;
+            this in turn puts them at risk for experiencing negative emotional
+            and psychosocial outcomes” (
+            <Link to="/sources#shannon-2022">Shannon et al., 2022</Link>).
           </p>
           <p>
-            One reason could be that graduate students are older and have
-            developed their mental abilities better (fully grown brain at the
-            age of 25) to understand their emotions and how to handle their
-            mental health better. If we base off the graph that underclassmen
-            show lower mental health scores at higher usage levels compared to
-            upperclassmen, it can suggest that students in their early college
-            days present greater emotional and social adjustment challenges,
-            whether it be feeling isolated due to an environment change or
-            overwhelming social anxiety from new people. These other factors
-            could be that younger students have grown up with the internet more
-            compared to upperclassmen, or that more graduate students may be
-            doing research or working 9 - 5 jobs while studying, which prompts
-            less time available to be on social media.
+            This vulnerability in younger students contrasts with the relative
+            stability observed in upperclassmen and graduate students. This
+            could be due to a difference in developmental maturity. Older
+            students typically have a more fully developed prefrontal cortex
+            (which is fully developed by age 25), allowing them to fully
+            understand emotional regulation, critical thinking, and impulse
+            control. This maturity helps them better manage the emotional impact
+            of social media and understand when usage is harmful towards their
+            health. Furthermore, life priorities, like academic research or
+            full-time professional commitments, naturally limit their social
+            media usage time, which protects from potential addiction or
+            problematic usage.
           </p>
           <p>
             These hypotheses indicate that more advanced research studies can be
@@ -340,18 +522,21 @@ export default function Narrative() {
             project. For example, using secondary sources from our annotated
             bibliograph,y such as “Understanding the Role of Social Media–Based
             Mental Health Support Among College Students: Survey and
-            Semistructured Interviews” by Vornholt, Piper, and Munmun De
-            Choudhury, allows us to analyze the stress factor between
-            undergraduate and graduate students. It was reported that “...Across
-            academic years, sophomores (25/101, 24.8%) were the largest group,
-            followed by graduate students (Masters, PhD: 22/101, 21.8%; juniors:
-            21/101, 20.8%; freshmen: 14/101, 13.9%; and seniors: 14/101, 13.9%)”
-            where “[a]n overwhelmingly large number of participants (71/101,
-            70.3%) indicated feeling stressed and/or anxious from college life…”
-            (Vornholt, Choudhury, 2024). This article is an instance where
-            sources can clarify and support our research focus and data
-            visualizations on identifying how social media poses the highest
-            mental health risks.
+            Semistructured Interviews” by{" "}
+            <Link to="/sources#vornholt-2021">
+              Vornholt, Piper, and Munmun De Choudhury
+            </Link>
+            , allows us to analyze the stress factor between undergraduate and
+            graduate students. It was reported that “...Across academic years,
+            sophomores (25/101, 24.8%) were the largest group, followed by
+            graduate students (Masters, PhD: 22/101, 21.8%; juniors: 21/101,
+            20.8%; freshmen: 14/101, 13.9%; and seniors: 14/101, 13.9%)” where
+            “[a]n overwhelmingly large number of participants (71/101, 70.3%)
+            indicated feeling stressed and/or anxious from college life…” (
+            <Link to="/sources#vornholt-2021">Vornholt, Choudhury, 2024</Link>).
+            This article is an instance where sources can clarify and support
+            our research focus and data visualizations on identifying how social
+            media poses the highest mental health risks.
           </p>
           <p className="muted" style={{ margin: 0, fontWeight: 700 }}>
             [Note: In the second visualization depicting the proportions of
