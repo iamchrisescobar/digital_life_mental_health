@@ -110,7 +110,6 @@ export default function Narrative() {
             suspect that this may be the reason why college students spend an
             increased average of time utilizing these platforms.
           </p>
-          {/* TODO: Add Nguyen, 2025 source and citation link*/}
           <p>
             The treemap also reveals that the more time a student spends on
             social media, the lower their mental health score is. This is shown
@@ -118,7 +117,8 @@ export default function Narrative() {
             platforms have features such as reels, posts, and story sharing.
             Studies have shown that platforms that involve short videos and
             reels are actively lowering the mental health status and cognitive
-            functioning for adults and youths (Nguyen, 2025). Some contents also
+            functioning for adults and youths (
+            <Link to="/sources#nguyen-2025">Nguyen, 2025</Link>). Some contents also
             involve negative messages of body image and self-esteem, which
             further impact youths and young adults negatively. On the other
             hand, platforms such as Line and LinkedIn have users reporting a
@@ -420,7 +420,6 @@ export default function Narrative() {
             mental health scores also increase, indicating better mental health
             conditions.
           </p>
-          {/* TODO: Add Kaylin and Wood sources and in-text citations*/}
           <p>
             This strong trend supports our research thesis that excessive
             social-media use disrupts healthy sleep patterns among college
@@ -428,12 +427,14 @@ export default function Narrative() {
             helps demonstrate how social-media addiction relates to sleep
             deprivation and decreased psychological well-being in young adults.
             Consistent with Twenge et al. (
-            <Link to="/sources#twenge-2018">2018</Link>) and Kaylin (2025), high
+            <Link to="/sources#twenge-2018">2018</Link>) and Kaylin (
+            <Link to="/sources#kaylin-2025">2025</Link>), high
             social-media engagement is strongly linked to poorer mental health
             and sleep outcomes, indirectly harming academic performance. Reduced
             sleep increases the risk of anxiety, depression, and poor academic
             performance. Screen exposure at night may further suppress melatonin
-            production and increase health risks (Wood et al., 2013). Therefore,
+            production and increase health risks (
+            <Link to="/sources#wood-2013">Wood et al., 2013</Link>). Therefore,
             interventions promoting digital wellness and screen curfews could
             improve students’ mental health, academic performance, and overall
             well-being.

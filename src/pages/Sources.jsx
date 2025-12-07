@@ -122,6 +122,16 @@ const bibliography = [
     annotation: 'This study finds that social media provides important social support for adolescents, especially those in rural or geographically isolated areas. Based on surveys from 275 students, it shows that online platforms can serve as positive support systems, challenging the idea that social media is only harmful.'
   },
   {
+    id: 'kaylin-2025',
+    citation: (
+      <>
+        Kaylin. Phone Screen Time Addiction & Usage - New Survey Data & Statistics. 8 Jan. 2025,
+      </>
+    ),
+    links: [{ label: 'Link', href: 'https://www.harmonyhit.com/phone-screen-time-statistics/' }],
+    annotation: 'This source provides statistics showing that daily screen time and phone use are increasing, especially among younger users. It reports that many people, particularly Gen Z, consider themselves addicted to their phones, and that social media is the most commonly identified addictive app. The data suggest a strong perceived link between screen time and mental health problems, although the report is not peer reviewed.'
+  },
+  {
     id: 'lavis-2020',
     citation: (
       <>
@@ -153,6 +163,17 @@ const bibliography = [
     ),
     links: [{ label: 'Link', href: 'https://ncmedicaljournal.com/article/55247' }],
     annotation: 'This commentary discusses both the challenges and opportunities social media creates for youth mental health. Using usage data and clinical research, it highlights factors such as cybervictimization, humor, and online social support as key influences. It helps explain why social media use may affect mental health in different ways.'
+  },
+  {
+    id: 'nguyen-2025',
+    citation: (
+      <>
+        Nguyen, Lan, et al. &quot;Feeds, Feelings, and Focus: A Systematic Review and Meta-Analysis Examining the Cognitive and Mental Health Correlates of Short-Form Video Use.&quot;{' '}
+        <cite>Psychological Bulletin</cite>, vol. 151, no. 9, American Psychological Association, Sept. 2025, pp. 1125–46,
+      </>
+    ),
+    links: [{ label: 'Link', href: 'https://doi.org/10.1037/bul0000498' }],
+    annotation: 'This meta-analysis reviews studies on short-form video apps like TikTok and finds that higher use is linked to poorer mental health, especially increased stress and anxiety, along with weaker cognitive outcomes such as reduced attention. It provides updated evidence that fast-paced social media formats may negatively affect users well-being.'
   },
   {
     id: 'niu-2024',
@@ -254,6 +275,17 @@ const bibliography = [
     ),
     links: [{ label: 'DOI', href: 'https://doi.org/10.2196/24512' }],
     annotation: 'This study argues that limited access to therapy on college campuses has led many students to seek social and emotional support through social media. Using a mix of surveys and interviews, the researchers found that about 70 percent of participants had recently experienced mental health challenges, and roughly half turned to social media for support. The findings highlight how widespread mental health struggles have become among college students and how online platforms now play a major role in coping and stigma reduction. This study supports our thesis by showing how social media influences students’ experiences with anxiety and depression and points to gaps in traditional campus support systems.'
+  },
+  {
+    id: 'wood-2013',
+    citation: (
+      <>
+        Wood, Brittany, et al. &quot;Light Level and Duration of Exposure Determine the Impact of Self-Luminous Tablets on Melatonin Suppression.&quot;{' '}
+        <cite>Applied Ergonomics</cite>,  vol. 44, no. 2, Mar. 2013, pp. 237–240,
+      </>
+    ),
+    links: [{ label: 'DOI', href: 'https://doi.org/10.1016/j.apergo.2012.07.008' }],
+    annotation: 'This article studies how work conditions and ergonomic risks contribute to a very high rate of musculoskeletal disorders among early intervention educators, with 94 percent reporting symptoms. While it is not about social media or mental health directly, it shows how long periods of work in poor ergonomic environments can harm physical health, which could be relevant if you also consider physical strain from screen or device use in your project.'
   }
 ]
 
