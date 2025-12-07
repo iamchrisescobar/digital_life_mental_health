@@ -7,34 +7,40 @@ const sliderItems = [
   {
     title: 'Figure 1',
     description: 'Scatter plot showing mental health score trend versus daily social media use',
-    image: 'images/team/plots/MentalHealthVsSMDailyUse.png'
+    image: 'images/team/plots/MentalHealthVsSMDailyUse.png',
+    id: 'figure-1'
   },
   {
     title: 'Figure 2',
     description: 'Treemap showing the average daily use and mental health scores for different social media platforms',
-    image: 'images/team/plots/Fig2.png'
+    image: 'images/team/plots/Fig2.png',
+    id: 'figure-2'
   },
   {
     title: 'Figure 3',
     description: 'Visualization showing average depression level reported by gender',
-    image: 'images/team/plots/Fig3.png'
+    image: 'images/team/plots/Fig3.png',
+    id: 'figure-3'
   },
   {
     title: 'Figure 5',
     description: 'Map showing the high depression prevalence reported by state',
-    image: 'images/team/plots/Fig5.png'
+    image: 'images/team/plots/Fig5.png',
+    id: 'figure-5'
   },
   {
     title: 'Figure 6',
     description:
       'Scatter plot showing relationship between sleep hours per night and average social media daily usage expressed in hours',
-    image: 'images/team/plots/Fig6.png'
+    image: 'images/team/plots/Fig6.png',
+    id: 'figure-6'
   },
   {
     title: 'Figure 9',
     description:
       'Bar chart displaying the relationship between average mental health score and social media usage reported by academic level',
-    image: 'images/team/plots/Fig9.png'
+    image: 'images/team/plots/Fig9.png',
+    id: 'figure-9'
   }
 ]
 
@@ -76,6 +82,16 @@ export default function Home() {
 
   const prevSlide = () => setIndex((prev) => (prev - 1 + totalSlides) % totalSlides)
   const nextSlide = () => setIndex((prev) => (prev + 1) % totalSlides)
+  const currentSlide = sliderItems[index]
+  const slideTarget = `#/narrative#${currentSlide.id}`
+
+  const handleSlideNavigation = (event) => {
+    event.preventDefault()
+    const baseUrl = window.location.href.split('#')[0]
+    const targetUrl = `${baseUrl}${slideTarget}`
+    window.location.href = targetUrl
+    window.location.reload()
+  }
 
   return (
     <section className="home stack">
@@ -193,7 +209,7 @@ export default function Home() {
       </FbPost>
 
       <FbPost
-        title="Explore our Data Visualizations"
+        title="Explore Data Visualizations from the Narrative"
         likes={engagement.slider.likes}
         comments={engagement.slider.comments}
         shares={engagement.slider.shares}
@@ -202,22 +218,24 @@ export default function Home() {
           <button className="slider-btn" type="button" aria-label="Previous slide" onClick={prevSlide}>
             &lt;
           </button>
-          <div
-            className="slide"
-            style={{
-              backgroundImage: `url(${sliderItems[index].image})`
-            }}
-            role="img"
-            aria-label={`${sliderItems[index].title} - ${sliderItems[index].description}`}
-          >
-            <div className="slide-content">
-              <div className="slide-info">
-                <span className="slide-tag">Data visualization</span>
-                <p className="slide-title">{sliderItems[index].title}</p>
-                <p className="slide-caption">{sliderItems[index].description}</p>
+          <a className="slide-link" href={slideTarget} onClick={handleSlideNavigation}>
+            <div
+              className="slide"
+              style={{
+                backgroundImage: `url(${currentSlide.image})`
+              }}
+              role="img"
+              aria-label={`${currentSlide.title} - ${currentSlide.description}`}
+            >
+              <div className="slide-content">
+                <div className="slide-info">
+                  <span className="slide-tag">Data visualization</span>
+                  <p className="slide-title">{currentSlide.title}</p>
+                  <p className="slide-caption">{currentSlide.description}</p>
+                </div>
               </div>
             </div>
-          </div>
+          </a>
           <button className="slider-btn" type="button" aria-label="Next slide" onClick={nextSlide}>
             &gt;
           </button>

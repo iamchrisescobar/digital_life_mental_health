@@ -1,8 +1,18 @@
-﻿import React from "react";
-import { Link } from "react-router-dom";
+﻿import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import TableauEmbed from "../components/TableauEmbed.jsx";
 
 export default function Narrative() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const target = document.getElementById(hash.slice(1));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [hash]);
+
   return (
     <section className="stack narrative">
       <header className="stack">
@@ -24,6 +34,7 @@ export default function Narrative() {
             self-reported mental health.
           </p>
           <figure
+            id="figure-1"
             style={{ margin: "1rem auto", width: "100%", maxWidth: "480px" }}
           >
             <img
@@ -68,25 +79,27 @@ export default function Narrative() {
 
         <div className="card stack">
           <h2>How Social Media is being Used</h2>
-          <TableauEmbed
-            title="Treemap of Social Media Platforms"
-            path="views/media_addiction/Treemap"
-            staticImage="https://public.tableau.com/static/images/me/media_addiction/Treemap/1.png"
-            toolbar="yes"
-            heightRatio={0.75}
-            params={{ tabs: "no" }}
-          />
-          <figcaption
-            style={{
-              textAlign: "center",
-              marginTop: "0.5rem",
-              fontStyle: "italic",
-              fontSize: "0.9rem",
-            }}
-          >
-            Figure 2: Treemap showing the average daily use and mental health
-            scores for different social media platforms
-          </figcaption>
+          <div id="figure-2">
+            <TableauEmbed
+              title="Treemap of Social Media Platforms"
+              path="views/media_addiction/Treemap"
+              staticImage="https://public.tableau.com/static/images/me/media_addiction/Treemap/1.png"
+              toolbar="yes"
+              heightRatio={0.75}
+              params={{ tabs: "no" }}
+            />
+            <figcaption
+              style={{
+                textAlign: "center",
+                marginTop: "0.5rem",
+                fontStyle: "italic",
+                fontSize: "0.9rem",
+              }}
+            >
+              Figure 2: Treemap showing the average daily use and mental health
+              scores for different social media platforms
+            </figcaption>
+          </div>
           <p>
             It is important to consider the specific social media platforms that
             students are using on a daily basis. To summarize this data, we
@@ -123,24 +136,26 @@ export default function Narrative() {
 
         <div className="card stack">
           <h2>Gender</h2>
-          <TableauEmbed
-            title="Average Depression Totals by Gender"
-            path="AverageDepressionTotalsbyGenderGendervs_MentalHealthRelationshipGENDERDISTRIBUTION/GenderBarPlot-AverageDepression"
-            staticImage="https://public.tableau.com/static/images/Av/AverageDepressionTotalsbyGenderGendervs_MentalHealthRelationshipGENDERDISTRIBUTION/GenderBarPlot-AverageDepression/1.png"
-            toolbar="yes"
-            heightRatio={0.75}
-            params={{ tabs: "no" }}
-          />
-          <figcaption
-            style={{
-              textAlign: "center",
-              marginTop: "0.5rem",
-              fontStyle: "italic",
-              fontSize: "0.9rem",
-            }}
-          >
-            Figure 3: Visualization showing average depression level reported by gender
-          </figcaption>
+          <div>
+            <TableauEmbed
+              title="Average Depression Totals by Gender"
+              path="AverageDepressionTotalsbyGenderGendervs_MentalHealthRelationshipGENDERDISTRIBUTION/GenderBarPlot-AverageDepression"
+              staticImage="https://public.tableau.com/static/images/Av/AverageDepressionTotalsbyGenderGendervs_MentalHealthRelationshipGENDERDISTRIBUTION/GenderBarPlot-AverageDepression/1.png"
+              toolbar="yes"
+              heightRatio={0.75}
+              params={{ tabs: "no" }}
+            />
+            <figcaption
+              style={{
+                textAlign: "center",
+                marginTop: "0.5rem",
+                fontStyle: "italic",
+                fontSize: "0.9rem",
+              }}
+            >
+              Figure 3: Visualization showing average depression level reported by gender
+            </figcaption>
+          </div>
 
           <p className="muted" style={{ fontWeight: 700 }}>
             Research Question: How do mental health challenges differ across
@@ -212,7 +227,7 @@ export default function Narrative() {
             can be accounted for in the chart as we can see slightly more
             reports of female severe depression.
           </p>
-          <p>
+          <p id="figure-3">
             Therefore, it can be assumed that the causes of the differences
             [where females have shown to have slightly more negative higher
             mental health results] could also stem from other factors such as
@@ -385,7 +400,7 @@ export default function Narrative() {
               </figure>
             </div>
           </div>
-          <p>
+          <p id="figure-5">
             The scatterplot shows individual observations, and the regression
             line further clarifies the trend. The put between usage time and
             sleep hours display a clear downward pattern, with a negatively
@@ -425,7 +440,7 @@ export default function Narrative() {
           </p>
         </div>
 
-        <div className="card stack">
+        <div className="card stack" id="figure-6">
           <h2>Student Standing</h2>
           <TableauEmbed
             title="Avg Social Media Use Associated with Mental Health Effects based on College Standing"
@@ -548,7 +563,7 @@ export default function Narrative() {
             poor mental health, as there are a multitude of factors that
             contribute to depression and anxiety.
           </p>
-          <p>
+          <p id="figure-9">
             However, there are still limitations in the dataset. First, this
             study could be explored in greater depth by examining differences in
             mental health scores across more specific academic levels (e.g.,

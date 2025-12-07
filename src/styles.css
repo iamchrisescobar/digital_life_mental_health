@@ -674,6 +674,12 @@ h3 { margin: 0 0 6px; }
   align-items: center;
 }
 
+.slide-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .slider-btn {
   border: 2px solid var(--card-border);
   background: var(--card);
@@ -704,6 +710,7 @@ h3 { margin: 0 0 6px; }
   align-items: flex-end;
   border: 1px solid var(--card-border);
   box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  cursor: pointer;
 }
 
 .slide::after {
