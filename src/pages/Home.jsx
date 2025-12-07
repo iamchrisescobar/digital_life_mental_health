@@ -1,23 +1,40 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import FbPost from '../components/FbPost.jsx'
 import TableauEmbed from '../components/TableauEmbed.jsx'
 import TimelineEmbed from '../components/TimelineEmbed.jsx'
 
 const sliderItems = [
   {
-    title: 'Plot Number 1',
-    caption: 'Connections and conversations that shape student life.',
-    gradient: 'linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%)'
+    title: 'Figure 1',
+    description: 'Scatter plot showing mental health score trend versus daily social media use',
+    image: 'images/team/plots/MentalHealthVsSMDailyUse.png'
   },
   {
-    title: 'Plot Number 2',
-    caption: 'Moments of calm, study, and scrolling between classes.',
-    gradient: 'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)'
+    title: 'Figure 2',
+    description: 'Treemap showing the average daily use and mental health scores for different social media platforms',
+    image: 'images/team/plots/Fig2.png'
   },
   {
-    title: 'Plot Number 3',
-    caption: 'Students across borders comparing digital habits.',
-    gradient: 'linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%)'
+    title: 'Figure 3',
+    description: 'Visualization showing average depression level reported by gender',
+    image: 'images/team/plots/Fig3.png'
+  },
+  {
+    title: 'Figure 5',
+    description: 'Map showing the high depression prevalence reported by state',
+    image: 'images/team/plots/Fig5.png'
+  },
+  {
+    title: 'Figure 6',
+    description:
+      'Scatter plot showing relationship between sleep hours per night and average social media daily usage expressed in hours',
+    image: 'images/team/plots/Fig6.png'
+  },
+  {
+    title: 'Figure 9',
+    description:
+      'Bar chart displaying the relationship between average mental health score and social media usage reported by academic level',
+    image: 'images/team/plots/Fig9.png'
   }
 ]
 
@@ -49,8 +66,16 @@ export default function Home() {
     }
   }))
 
-  const prevSlide = () => setIndex((index - 1 + totalSlides) % totalSlides)
-  const nextSlide = () => setIndex((index + 1) % totalSlides)
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % totalSlides)
+    }, 5000)
+
+    return () => clearInterval(timer)
+  }, [totalSlides])
+
+  const prevSlide = () => setIndex((prev) => (prev - 1 + totalSlides) % totalSlides)
+  const nextSlide = () => setIndex((prev) => (prev + 1) % totalSlides)
 
   return (
     <section className="home stack">
@@ -168,21 +193,29 @@ export default function Home() {
       </FbPost>
 
       <FbPost
-        title="Images Slideshow"
+        title="Explore our Data Visualizations"
         likes={engagement.slider.likes}
         comments={engagement.slider.comments}
         shares={engagement.slider.shares}
       >
-        <p className="muted">Sample images to fill the space for now.</p>
         <div className="slider">
           <button className="slider-btn" type="button" aria-label="Previous slide" onClick={prevSlide}>
             &lt;
           </button>
-          <div className="slide" style={{ backgroundImage: sliderItems[index].gradient }}>
+          <div
+            className="slide"
+            style={{
+              backgroundImage: `url(${sliderItems[index].image})`
+            }}
+            role="img"
+            aria-label={`${sliderItems[index].title} - ${sliderItems[index].description}`}
+          >
             <div className="slide-content">
-              <span className="slide-tag">Placeholder</span>
-              <p className="slide-title">{sliderItems[index].title}</p>
-              <p className="slide-caption">{sliderItems[index].caption}</p>
+              <div className="slide-info">
+                <span className="slide-tag">Data visualization</span>
+                <p className="slide-title">{sliderItems[index].title}</p>
+                <p className="slide-caption">{sliderItems[index].description}</p>
+              </div>
             </div>
           </div>
           <button className="slider-btn" type="button" aria-label="Next slide" onClick={nextSlide}>

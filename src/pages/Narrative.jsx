@@ -139,7 +139,7 @@ export default function Narrative() {
               fontSize: "0.9rem",
             }}
           >
-            Figure 3: Plot showing average depression level reported by gender
+            Figure 3: Visualization showing average depression level reported by gender
           </figcaption>
 
           <p className="muted" style={{ fontWeight: 700 }}>
@@ -180,13 +180,13 @@ export default function Narrative() {
             annotated bibliography, it is stated in “Social Media Exposure and
             College Students’ Mental Health During the Outbreak of COVID-19: The
             Mediating Role of Rumination and the Moderating Role of Mindfulness”
-            by Hong, Wei, et al., that results “showed no differences of scores”
-            between mindfulness, rumination, and psychological distress between
-            males and females (<Link to="/sources#hong-2021">Hong, 2021</Link>).
-            However, it is stated in another article we analyzed, “Shelter in
-            the Online World? Benefits and Risks Associated with Social Media
-            Use for College Students’ Mental Health in the Early Stage of
-            COVID-19 Pandemic” by{" "}
+            by <Link to="/sources#hong-2021">Hong, Wei, et al.</Link>, that
+            results “showed no differences of scores” between mindfulness,
+            rumination, and psychological distress between males and females (
+            <Link to="/sources#hong-2021">Hong, 2021</Link>). However, it is
+            stated in another article we analyzed, “Shelter in the Online World?
+            Benefits and Risks Associated with Social Media Use for College
+            Students’ Mental Health in the Early Stage of COVID-19 Pandemic” by{" "}
             <Link to="/sources#niu-2024">Niu, Yanzhuo, et al.</Link>, that
             female students reported higher levels of depression and anxiety
             than male students although “gender did not moderate the
@@ -476,7 +476,7 @@ export default function Narrative() {
             </figcaption>
           </figure>
           <p>
-            From the line chart, across all three academic groups (High School,
+            From the line chart (Figure 8), across all three academic groups (High School,
             Undergraduate, Graduate), the lines show a consistent negative
             relationship between daily social media use and mental health
             scores. The undergraduate and graduate trend lines remain
@@ -484,13 +484,17 @@ export default function Narrative() {
             indicating similar mental health outcomes across different usage
             durations. On the other hand, although showing a similar negative
             slope, high school individuals exhibit lower mental health scores at
-            every level of social media use. In the context of our project, we
-            can observe that undergraduate and graduate students (upperclassmen)
-            are generally happier or have better mental health reports than high
-            school students.
+            every level of social media use. Figure 9, a bar chart, summarizes
+            the average mental health score and daily usage hours for each
+            academic group. This further highlights the differences between each
+            group and shows how there is a correlation between lower usage hours
+            and higher average mental health scores. In the context of our
+            project, we can observe that undergraduate and graduate students
+            (upperclassmen) are generally happier or have better mental health
+            reports than high school students.
           </p>
           <p>
-            The visualization ultimately helps us examine how vulnerability to
+            These visualizations ultimately help us examine how vulnerability to
             social media may vary depending on a student's stage in college and
             age, which leads to more questions on why these differences are
             present. Based on the graph, underclassmen show significantly lower
@@ -498,7 +502,8 @@ export default function Narrative() {
             upperclassmen, suggesting that students in their early college days
             present greater emotional and social adjustment challenges, whether
             it be feeling isolated due to an environment change or overwhelming
-            social anxiety. According to Shannon et al., “youth are more at risk
+            social anxiety. This is consistent with existing research on youth
+            vulnerability, according to Shannon et al., “youth are more at risk
             for facing cyberbullying, finding it difficult to disengage from the
             media and allowing it to interfere with their social relationships;
             this in turn puts them at risk for experiencing negative emotional
