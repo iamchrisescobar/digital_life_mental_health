@@ -470,7 +470,7 @@ export default function Narrative() {
                 fontSize: "0.9rem",
               }}
             >
-              Figure 9: Histogram displaying the relationship between average
+              Figure 9: Bar chart displaying the relationship between average
               mental health score and social media usage reported by academic
               level
             </figcaption>
