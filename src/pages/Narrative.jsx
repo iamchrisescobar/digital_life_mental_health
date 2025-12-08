@@ -118,8 +118,8 @@ export default function Narrative() {
             Studies have shown that platforms that involve short videos and
             reels are actively lowering the mental health status and cognitive
             functioning for adults and youths (
-            <Link to="/sources#nguyen-2025">Nguyen, 2025</Link>). Some contents also
-            involve negative messages of body image and self-esteem, which
+            <Link to="/sources#nguyen-2025">Nguyen, 2025</Link>). Some contents
+            also involve negative messages of body image and self-esteem, which
             further impact youths and young adults negatively. On the other
             hand, platforms such as Line and LinkedIn have users reporting a
             relatively higher mental health score due to the limited features of
@@ -153,7 +153,8 @@ export default function Narrative() {
                 fontSize: "0.9rem",
               }}
             >
-              Figure 3: Visualization showing average depression level reported by gender
+              Figure 3: Visualization showing average depression level reported
+              by gender
             </figcaption>
           </div>
 
@@ -296,52 +297,73 @@ export default function Narrative() {
           <p>
             In comparing these two maps, we can analyze whether there is a
             relationship between general health and the prevalence of high
-            depression levels. We are also able to draw inferences in whether a
-            student’s state affects their general or mental health. In the
-            health map, the average general health is depicted on a color scale,
-            with darker colors being excellent and lighter colors being poor. In
-            the depression map, darker shaded areas indicate a higher proportion
-            of students reporting moderate to severe depression symptoms.
+            depression levels, and whether a student’s state might influence
+            their physical or mental well-being. The health map shows average
+            general health on a color scale. The darker shades indicate
+            excellent health, and the lighter shades indicate poorer health.
+            Additionally, the depression map uses darker shading to represent a
+            higher proportion of students reporting moderate to severe
+            depression symptoms. When viewed together, these maps reflect
+            broader national patterns scholars have documented. For instance,
+            researchers have found that “as social media started gaining
+            popularity in the mid-2000s, the mental health of adolescents and
+            young adults in the United States began to worsen,” noting that the
+            share of young people reporting a major depressive episode rose by{" "}
+            <b>83 percent between 2008 and 2018</b> (
+            <Link to="/sources#braghieri-2022">
+              Braghieri, Levy, & Makarin, 2022
+            </Link>
+            ). Other studies emphasize that “heavy use and prolonged time spent
+            on social media platforms… contributes to increased risk for… poor
+            well-being,” in part because excessive screen time intensifies
+            anxiety and depressive symptoms (
+            <Link to="/sources#naslund-2020">Naslund et al., 2020</Link>). These
+            national trends provide meaningful background as we explore how
+            state-level health patterns appear in our maps.
           </p>
           <p>
-            In states with worse average health, it seems that there is also a
-            bigger proportion of students suffering from severe depression. This
-            relationship is obvious in states like Idaho and South Dakota. This
-            relationship between mental health and physical health is supported
-            in research \[insert source here\].
+            Across several states, areas with worse average physical health tend
+            to overlap with those reporting higher proportions of severe
+            depression. This connection is especially clear in states such as
+            Idaho and South Dakota, where lighter shades on the health map align
+            with darker regions on the depression map. Research supports this
+            relationship, demonstrating that mental and physical health are
+            deeply intertwined and can influence one another over time.
+            Furthermore, scholars argue that <b>how</b> people use social media
+            may be more important than simply <b>how much</b> they use it. The
+            quality matters over quantity, as certain behaviors, such as
+            negative social comparison and rumination, can directly contribute
+            to later depressive symptoms (
+            <Link to="/sources#berryman-2018">
+              Berryman, Ferguson, & Negy, 2018
+            </Link>
+            ). This helps contextualize why some states may show higher
+            depression severity even when physical health appears relatively
+            stable.
           </p>
           <p>
-            However, it is important to note that some states only had a small
-            number of respondents, which can skew results. For example,
-            Mississippi has a general health score of 5 (darker shade), but this
-            score is based solely on the response of one respondent who
-            completed the survey. As such, we can not use this result to
-            represent the whole population. In California, the average health
-            was about 3.6 based on 76 respondents, which indicates that the
-            general health of California was good based on a moderately sized
-            group of respondents. On the other hand, about 46.05% of the
-            California respondents reported high depression severity.
-          </p>
-          {/* TODO: Add General Health and Depression Severity Tableau Visualization */}
-          {/* TODO: Add required Citations and Links*/}
-          <p>
-            The bar chart highlights the least amount of male and female
-            students who are in an excellent general health status, while a fair
-            description of general health is a good amount, but it is a little
-            bit higher in females than males. Social media could affect the
-            general health, but not in the same way it affects mental health. It
-            also affects females more than males, according to what we have
-            analysed from the bar chart visualization. Moreover, Harmony
-            Healthcare IT (2025) reported that both genders recognize rising
-            social media addiction and its negative impact on sleep and mental
-            well-being, though females report stronger emotional consequences.
-            Roberts et al. (2014) found that females are more likely to engage
-            in image-based social media activities like Instagram, which
-            heighten comparison and self-esteem issues. In contrast, males tend
-            to experience fewer emotional effects but may face behavioral
-            addictions related to gaming or general screen time. All of these
-            secondary sources' arguments are strengthened through our bar chart
-            visualization.
+            On the other hand, it is important to recognize the limitations of
+            the data. Some states had very few respondents, which can distort
+            results. For example, Mississippi shows an excellent general health
+            score of 5 (a darker shade), but this value comes from a single
+            survey response and therefore cannot represent the broader
+            population. In contrast, California’s average general health score
+            of about 3.6 is based on 76 respondents, offering a more reliable
+            picture of students’ well-being. Yet even in a state with generally
+            good physical health, mental health concerns remain significant:
+            <b> 46.05%</b> of California respondents reported high depression
+            severity. This reflects wider research on young adults’ mental
+            health challenges and aligns with findings that by 2005, Facebook
+            alone had reached “approximately 85 percent of students” on campuses
+            nationwide (
+            <Link to="/sources#braghieri-2022">
+              Braghieri, Levy, & Makarin, 2022
+            </Link>
+            ), illustrating how rapidly the digital environment expanded during
+            the same years that depression rates rose. Together, these patterns
+            remind us that interpreting health data requires looking not only at
+            individual states but also at the broader social conditions shaping
+            students’ experiences.
           </p>
         </div>
 
@@ -428,10 +450,10 @@ export default function Narrative() {
             deprivation and decreased psychological well-being in young adults.
             Consistent with Twenge et al. (
             <Link to="/sources#twenge-2018">2018</Link>) and Kaylin (
-            <Link to="/sources#kaylin-2025">2025</Link>), high
-            social-media engagement is strongly linked to poorer mental health
-            and sleep outcomes, indirectly harming academic performance. Reduced
-            sleep increases the risk of anxiety, depression, and poor academic
+            <Link to="/sources#kaylin-2025">2025</Link>), high social-media
+            engagement is strongly linked to poorer mental health and sleep
+            outcomes, indirectly harming academic performance. Reduced sleep
+            increases the risk of anxiety, depression, and poor academic
             performance. Screen exposure at night may further suppress melatonin
             production and increase health risks (
             <Link to="/sources#wood-2013">Wood et al., 2013</Link>). Therefore,
@@ -491,10 +513,10 @@ export default function Narrative() {
             </figcaption>
           </figure>
           <p>
-            From the line chart (Figure 8), across all three academic groups (High School,
-            Undergraduate, Graduate), the lines show a consistent negative
-            relationship between daily social media use and mental health
-            scores. The undergraduate and graduate trend lines remain
+            From the line chart (Figure 8), across all three academic groups
+            (High School, Undergraduate, Graduate), the lines show a consistent
+            negative relationship between daily social media use and mental
+            health scores. The undergraduate and graduate trend lines remain
             approximately at the same level with several intersections,
             indicating similar mental health outcomes across different usage
             durations. On the other hand, although showing a similar negative
